@@ -1,0 +1,7 @@
+aviao.html
+<form name="Cadastro" action="http://localhost:5000/compra_passagem/" method="GET" align= left>
+<form name="Consulta" action="http://localhost:5000/passagens" method="GET" align= left>
+
+hotem.html
+<form name="Cadastro" action="http://localhost:5000/reserva_hotel/" method="GET" align= left>
+<form name="Cadastro" action="http://localhost:5000/hoteis" method="GET" align= left>

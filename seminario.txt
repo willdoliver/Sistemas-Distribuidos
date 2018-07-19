@@ -1,0 +1,126 @@
+RSSF Capitulo 19
+
+Computação Móvel
+	carregar seus computadores pessoais
+	depois telefones inteligentes(smartphones)
+	PDA x notebook (bateria e tamanho)
+	smartphones como alternativa para aos equipamentos de mao de finalidade especifica
+	Problemas
+		como fornecer conectividade contínua para dispositivos móveis que entram e saem do alcance
+		como permitir que conjuntos de dispositivos se comuniquem sem fio uns com os outros, em lugares onde não existe infraestrutura
+	conectividade sem fio direta não está disponível entre quaisquer dois dispositivos(origem problema)
+	comunicação precisa ser obtida por meio de vários segmentos de rede com ou sem fio
+	Dois fatores principais levam a essa cobertura sem fio subdividida. 
+		Primeiro, quanto maior o alcance de uma rede sem fio, mais dispositivos competirão por sua largura de banda limitada. 
+		Segundo, considerações sobre a energia se aplicam: a ener-gia necessária para transmitir um sinal sem fio é proporcional ao quadrado de seu alcance
+
+Computação Ubiqua ("em toda parte")
+	Mark Weiser percebeu uma crescente predominancia de computadores
+		Primeira Mudanca: Cada pessoa no mundo utilizaria muitos computadores e nao apenas 1
+	Na computação ubíqua, os computadores se multiplicam na forma e na função e não apenas no número, para atender a diferentes tarefas
+		Segunda Mudanca: Os computadores desapareceriam (indistinguiveis) mas estariam disfarcados em toda parte (carro, maquinas)
+
+Computacao acoplada ao corpo
+	diferente dos equipamentos de mao esses possuem funcionalidades especificas (cracha ativo, chave de carro)
+
+Computação com reconhecimento de contexto
+	É onde os sistemas de computadores adaptam seu comportamento automaticamen-te, de acordo com as circunstâncias físicas
+	Considere um telefone celular com reconhecimento de contexto, que só deve tocar quando for apropriado
+		Em particular, ele deve trocar automaticamente para o modo “vibrar”, em vez de “tocar”, quando estiver no cinema (19.4 Joao)
+
+Sistemas Volateis
+	O conjunto de usuários,hardware e software nos sistemas móveis e ubíquos é altamente dinâmico e muda de maneira imprevisível
+
+	As formas relevantes de volatilidade incluem: 
+	•	falhas de dispositivos e enlaces de comunicação; 
+	•	mudanças nas características da comunicação, como a largura de banda; 
+	•	a criação e destruição de associações – relacionamentos de comunicação lógicos – entre os componentes de
+		software residentes nos dispositivos
+
+	A volatilidade não é uma propriedade que define os sistemas móveis e ubíquos
+		existem outros tipos de sistema que demonstram uma ou mais formas de volatilidade, mas que não são móveis, nem ubíquos
+		Exemplo: é a computação peer-to-peer em compartilhamento de arquivo
+
+Espaços inteligentes
+	Um espaço inteligente é qualquer local físico com serviços incorporados(monitoramento ambiental)
+	aparecimento e desaparecimento
+		atuam como ambientes para os dispositivos que os visitam e saem. Os usuários entram e saem com equipamentos que carregam, ou vestem; dispositivos de robótica podem se mover sozinhos, entrando e saindo do espaço
+		Casas inteligentes
+		dispositivos podem falhar e desaparecer
+	Embora parecam semelhantes os motivos no quesito seguranca a diferenca eh grande pois um espaco inteligente e ambiente externo sao muito diferentes 
+
+	um componente de software aparece em um espaço inteligente previamente existente e, se resultar algo interessante, ele torna-se integrado a esse espaço, pelo menos temporariamente; ou, então, um componente desaparece do espaço por causa da mobilidade ou porque é simplesmente desligado ou porque falha(bloetooth de celulares em regioes densamente povoada)
+
+Modelo de dispositivo
+	dispositivos possuem bateria limitada e limitados recursos(armazenamento, largura de banda, tamanho) de compilacao e possuem interface propria(sensores(luz, som, carga-precisao(bateria do iphone5)), controladores(controlados por software))
+	exemplo de particulas(pó inteligente) (incendio na floresta - particulas se comunicam pra alertar)
+
+Conectividade volátil(Blue-tooth, WiFi, 3G)
+	desconexao
+	largura de banda e latencia variaveis
+
+Interação espontânea
+	Orientada a usuários humanos: navegador web e servidores web
+	Orientada a dados: aplicativos de compartilhamento de arquivo P2P
+	Fisicamente orientada: sistemas móveis e ubíquos
+
+Menor confiança e privacidade
+	Que base de confiança pode haver entre componentes que são capazes de se associar espontaneamente?
+	Privacidade
+	Podem permitir
+	Viagem casa trabalho(analise de rotina)
+
+19.2 Associação(dispositivos se associam no espaco inteligente)
+	Inicialização na rede
+		um servidor de DHCP (veja a Seção 3.4.3) pode fornecer um endereço IP, outros parâmetros de interligação em rede e DNS, os quais o dispositivo obtém executando uma consulta em um endereço conhecido. No espaço inteli-gente, os servidores também podem atribuir um nome de domínio exclusivo ao dispositivo
+		O grupo de trabalho Zero Configuration Networking do IETF [www.zeroconf.org] está desenvolvendo padrões para a atribuição de endereço sem servidor
+		Qualquer dispositivo pode receber ou transmitir nesses endereços
+
+	Problema da associação
+		As soluções para o problema da associação devem tratar de dois aspectos principais: escala e abrangência. Primeiro, podem existir muitos dispositivos dentro do espaço inteligente e, talvez, muito mais componen-tes de software nesses dispositivos. Com quais deles, se for o caso, os componentes do dispositivo que está aparecendo deve interoperar e escolher de forma eficiente?
+		Segundo, como podemos restringir a abrangência ao solucionar esse problema, de modo a considerar apenas os componentes do espaço inteligente – e todos os componentes do espaço inteligente – em vez dos possíveis trilhões de componentes que estão de fora?
+
+	Servicos de Descoberta
+		é utilizado para descobrir os serviços fornecidos pelos espaços inteligentes
+		os espaços sao pesquisados por meio de seus atributos que são determinados pelo usuario no tempo de execucao
+			no espaço pode não haver infraestrutura para os atributos
+			os serviços podem sumir espontaneamente
+		existe tanto descoberta de dispositivos quanto de serviços(bluetooth ambos)
+			dispositivo: descobrem nomes e endereços de dispositivos próximos(ser humano pode selecionar)
+			serviço: atributos do serviço, não necessáriamente gera associação, o usuário pode escolher os serviços
+		Problemas:
+			Pouco esforço, sem trabalho humano
+				A consulta retorna os serviços nos EI e a seleção seria minimamente possível por humanos
+			Linguagem de consulta
+				corresponder os serviços com as solicitações dos clientes
+			Volatilidade do serviço
+				tratar o desaparecimento de um cliente
+		Envia mensagem multicast com solicitação e um IP responde e então é feita a conexão unicast(P2P)
+		Algo que levaria a uma maior complexidade na implementação dos clientes é no caso de salas de reunião onde não se tem um servidor mas é necessário ter ter um.
+		Arrendamento: alocação temporária de algum recurso de um servidor para um cliente(necessário atualizar)
+			Utilizados em servidores DHCP para alocar IPs
+
+	Associação Física(maior envolvimento humano)
+		Pode-se configurar a abrangencia da descoberta
+		Estimular o destino de enviar seu endereço
+
+19.3 Interoperabilidade
+	Como dois ou mais componentes de um sistema volátil se associam e interagem
+	1 problema: as interfaces são heterogeneas, adapta-las é estremamente trabalhoso
+		tentar estabelecer padrões e sintaxes
+			exemplo pipe(somente leitura e escrita)
+			especificacao do HTTP(get, post)
+
+	Programação orientada a dados(pipes do UNIX)
+		um componente pode ser invocado por qualquer componente que conheça sua interface fixa
+		Sistema baseado em eventos
+			publishers divulgam dados estruturados e assinantes recebem
+		exemplo: detectar quando dois usuários estão no mesmo lugar, em que se sabe apenas quando os usuários individuais entram ou saem de um local em particular
+		produtores e consumidores nao precisam se identificar
+	Evento Heap(iRoom)
+		controle remoto 'universal'
+
+	Associações indiretas
+		Componente conhece o endereço do serviço(infraestrutura) porém com a volatilidade isso poderia falhar a qualquer momento(falha)
+
+Se cada espaço inteligente desenvolvesse sua própria interface de programação, as vantagens da mobilidade seriam limitadas
